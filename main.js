@@ -11,48 +11,9 @@ class Pokemon {
     }
 }
 
-const Ewok = new Pokemon(1000, 'Ewok')
-const Tribble = new Pokemon(1000, 'Tribble')
-const Stitch = new Pokemon(1000, 'Stitch')
-const Zurg = new Pokemon(1000, 'Zurg')
-const Gollum = new Pokemon(1000, 'Gollum')
-const Anger = new Pokemon(1000, 'Anger')
-const Barney = new Pokemon(1000, 'Barney')
-const Doug = new Pokemon(1000, 'Doug')
-const Lorax = new Pokemon(1000, 'The Lorax')
-const PotatoHead = new Pokemon(1000, 'Potatohead')
-const Spiderman = new Pokemon(1000, 'Spiderman')
-const Squirt = new Pokemon(1000, 'Squirt')
-
 const createButton = document.querySelector('#createPokemon')
 createButton.addEventListener('click', function () {
-    let randomNumber = Math.round(Math.random() * 12)
-    console.log(randomNumber)
-    if (randomNumber === 1) {
-        populateDOM(Ewok)
-    } else if (randomNumber === 2) {
-        populateDOM(Tribble)
-    } else if (randomNumber === 3) {
-        populateDOM(Stitch)
-    } else if (randomNumber === 4) {
-        populateDOM(Gollum)
-    } else if (randomNumber === 5) {
-        populateDOM(Zurg)
-    } else if (randomNumber === 6) {
-        populateDOM(Anger)
-    } else if (randomNumber === 7) {
-        populateDOM(Barney)
-    } else if (randomNumber === 8) {
-        populateDOM(Doug)
-    } else if (randomNumber === 9) {
-        populateDOM(Lorax)
-    } else if (randomNumber === 10) {
-        populateDOM(Squirt)
-    } else if (randomNumber === 11) {
-        populateDOM(PotatoHead)
-    } else if (randomNumber === 12) {
-        populateDOM(Spiderman)
-    }
+
     })
 
 // create a new card from the existing api data
@@ -69,6 +30,7 @@ newButton.addEventListener('click', function () {
     }
 })
 
+
 // async function
 async function getAPIData(url) {
     try {
@@ -81,13 +43,13 @@ async function getAPIData(url) {
 }
 
 // use the returned async data
-const theData = getAPIData('https://pokeapi.co/api/v2/pokemon/?offset=100&limit=30')
+const theData = getAPIData('https://pokeapi.co/api/v2/pokemon?limit=100&offset=200')
 
     .then(data => {
         for (const pokemon of data.results) {
             getAPIData(pokemon.url)
                 .then(pokedata => {
-                    console.log(pokedata)
+                    console.log(pokedata.random)
                     populateDOM(pokedata)
 
                 })
@@ -141,34 +103,7 @@ function fillCardFront(pokeFront, data) {
     let pokeNum = getPokeNumber(data.id)
     pokeName.textContent = `${data.name[0].toUpperCase()}${data.name.slice(1)}`
     pokePicture.src = `https://raw.githubusercontent.com/fanzeyi/pokemon.json/master/images/${pokeNum}.png`
-    pokePicture.addEventListener('error', (event) => {
-        let badImage = event.target
-        if (pokeName.textContent === 'Ewok') { //Ewok
-            badImage.src = '/images/ewok.png'
-        } else if (pokeName.textContent === 'Tribble') { //Tribble
-            badImage.src = '/images/tribble.png'
-        } else if (pokeName.textContent === 'Stitch') { //Stitch
-            badImage.src = '/images/stitch.png'
-        } else if (pokeName.textContent === 'Zurg') { //Zurg
-            badImage.src = '/images/zurg.png'
-        } else if (pokeName.textContent === 'Anger') { //Anger
-            badImage.src = '/images/anger.png'
-        } else if (pokeName.textContent === 'Barney') { //Barney
-            badImage.src = '/images/barney.png'
-        } else if (pokeName.textContent === 'Doug') { //Doug
-            badImage.src = '/images/doug.png'
-        } else if (pokeName.textContent === 'The Lorax') { //Lorax
-            badImage.src = '/images/lorax.png'
-        } else if (pokeName.textContent === 'Potatohead') { //Potatohead
-            badImage.src = '/images/potatohead.png'
-        } else if (pokeName.textContent === 'Spiderman') { //Spiderman
-            badImage.src = '/images/spiderman.png'
-        } else if (pokeName.textContent === 'Squirt') { //Squirt
-            badImage.src = '/images/squirt.png'
-        } else if (pokeName.textContent === 'Gollum') { //Gollum
-            badImage.src = '/images/gollum.png'
-        } 
-    })
+    
     pokeFront.appendChild(pokePicture)
     pokeFront.appendChild(pokeName)
     
@@ -211,14 +146,3 @@ function getPokeNumber(id) {
 }
 
 
-//TO DO 
-    // make dialoge frame thingys to make entering info look good
-    // make dialogue thingy for creating a new pokemon from scratch
-    
-    // create a header that summarizes what the page is about
-
-    // figure out the pokemon name styling on the back of the card
-    // clean up my code -- delete code that I am no longer using or needing
-
-    // squirt, the lorax, need their names moved down
-    // doug, needs to be deleted
