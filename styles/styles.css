@@ -15,14 +15,13 @@
   
   h2 {
     text-align: center;
-    padding: 1rem 0 0 0;
+    padding: 2.5rem 0 0 0;
   }
   
   /*styling the body */
   body {
-    font-family: 'Exo 2', sans-serif;
     padding-bottom: 2rem;
-    background-image: linear-gradient(rgb(253, 247, 189), rgb(188, 228, 255));
+    background-image: linear-gradient(to bottom right, rgb(255, 255, 255), rgb(188, 228, 255));
   }
   
   main {
@@ -63,25 +62,25 @@
   
   .card__face--front {
     border-radius: 10px;
-    border: 1px double white;
-    color: black;
+    border: 1px double yellow;
+    color: blue;
     background-image: url(images/pokeball.jpg), linear-gradient(to bottom right, rgb(255, 97, 97) 20%, #ebebeb 65%, rgb(141, 137, 137));
     background-repeat: no-repeat, no-repeat;
     background-position: bottom left;
     background-size: 210px;
-    box-shadow: 0 0 5px 3px lightslategray;
+    box-shadow: 0 0 5px 3px yellow;
   }
   
   .card__face--back {
-    background-color: #252122;
+    background-color: rgb(56, 54, 173);
     background-image: url(images/cardBackground.jpg);
     background-repeat: no-repeat;
     background-position-y: -40px;
     background-size: 200px;
     border-radius: 10px;
-    transform: rotateX(180deg) rotateZ(180deg);
-    border: 1px double white;
-    box-shadow: 0 0 5px 3px lightslategray;
+    transform: rotateY(180deg);
+    border: 6px double blue;
+    box-shadow: 0 0 1px 1px white;
     color: white;
   }
   
@@ -120,6 +119,7 @@
   }
   
   #createPokemon {
+    display: none;
     width: 25%;
     background-image: linear-gradient(black, #4b4a4a);
     border: 1px double black;
