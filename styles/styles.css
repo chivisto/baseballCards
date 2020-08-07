@@ -1,23 +1,10 @@
   /* styling the header area */
-  .pokemonfont-title {
-    font-family: "pokemon-solid";
+  .title {
     text-align: center;
     font-size: 4rem;
     padding: 0;
     margin: 0;
     letter-spacing: 8px;
-  }
-  
-  .header-div {
-    display: flex;
-    justify-content: center;
-    max-width: 1280px;
-    margin: auto;
-    padding: 0 3rem;
-  }
-  
-  header ul {
-    padding: 0 0 0 1rem;
   }
   
   h4 {
@@ -35,16 +22,15 @@
   body {
     font-family: 'Exo 2', sans-serif;
     padding-bottom: 2rem;
-    background-image: linear-gradient(white, #bebdbd);
+    background-image: linear-gradient(rgb(253, 247, 189), rgb(188, 228, 255));
   }
   
   main {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    grid-gap: 1rem;
+    grid-gap: 2rem;
     max-width: 1280px;
-    margin: 2rem auto 2rem auto;
-    padding: 1rem 1rem;
+    margin:  0 auto;
   }
   
   /* styling the cards */
