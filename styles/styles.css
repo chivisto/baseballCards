@@ -1,0 +1,215 @@
+@font-face {
+    font-family: "pokemon-solid";
+    src: url(/fonts/pokemon-solid.ttf);
+  }
+  
+  /* styling the header area */
+  .pokemonfont-title {
+    font-family: "pokemon-solid";
+    text-align: center;
+    font-size: 4rem;
+    padding: 0;
+    margin: 0;
+    letter-spacing: 8px;
+  }
+  
+  .header-div {
+    display: flex;
+    justify-content: center;
+    max-width: 1280px;
+    margin: auto;
+    padding: 0 3rem;
+  }
+  
+  header ul {
+    padding: 0 0 0 1rem;
+  }
+  
+  h4 {
+    text-align: center;
+    margin: 0 auto .5rem auto;
+    padding: 0;
+  }
+  
+  h2 {
+    text-align: center;
+    padding: 1rem 0 0 0;
+  }
+  
+  /*styling the body */
+  body {
+    font-family: 'Exo 2', sans-serif;
+    padding-bottom: 2rem;
+    background-image: linear-gradient(white, #bebdbd);
+  }
+  
+  main {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: 1rem;
+    max-width: 1280px;
+    margin: 2rem auto 2rem auto;
+    padding: 1rem 1rem;
+  }
+  
+  /* styling the cards */
+  .scene {
+    width: 200px;
+    height: 260px;
+    margin: 0;
+    perspective: 600px;
+  }
+  
+  .card {
+    width: 100%;
+    height: 100%;
+    transition: transform 1s;
+    transform-style: preserve-3d;
+    cursor: pointer;
+    position: relative;
+  }
+  
+  .card.is-flipped {
+    transform: rotateX(180deg) rotateZ(180deg);
+  }
+  
+  .card__face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+  }
+  
+  .card__face--front {
+    border-radius: 10px;
+    border: 1px double white;
+    color: black;
+    background-image: url(images/pokeball.jpg), linear-gradient(black, #4b4a4a);
+    background-repeat: no-repeat, no-repeat;
+    background-position: bottom left;
+    background-size: 210px;
+    box-shadow: 0 0 5px 3px lightslategray;
+  }
+  
+  .card__face--back {
+    background-color: #252122;
+    background-image: url(images/cardBackground.jpg);
+    background-repeat: no-repeat;
+    background-position-y: -40px;
+    background-size: 200px;
+    border-radius: 10px;
+    transform: rotateX(180deg) rotateZ(180deg);
+    border: 1px double white;
+    box-shadow: 0 0 5px 3px lightslategray;
+    color: white;
+  }
+  
+  .pokeImage {
+    width: 90%;
+    margin-left: 5%;
+    margin-top: 1rem;
+    max-height: 180px;
+  }
+  
+  
+  /* front of card name styling */
+  .name-front-of-card {
+    color: black;
+    margin: 0;
+   position: absolute;
+   right: 4px;
+   bottom: 4px;
+    font-size: 1.4rem;
+    font-weight: 180px;
+    text-shadow: 1px 20px 50px #000000;
+  }
+  
+  /* styling the button */
+  #newPokemon {
+    width: 25%;
+    background-image: linear-gradient(black, #4b4a4a);
+    border: 1px double black;
+    color: white;
+    font-weight: bold;
+    box-shadow: 1px 1px 2px #000000;
+    height: 2rem;
+    margin-left: 37.5%;
+    margin-bottom: 1rem;
+    border-radius: 5px;
+  }
+  
+  #createPokemon {
+    width: 25%;
+    background-image: linear-gradient(black, #4b4a4a);
+    border: 1px double black;
+    color: white;
+    font-weight: bold;
+    box-shadow: 1px 1px 2px #000000;
+    height: 2rem;
+    margin-left: 37.5%;
+    margin-bottom: 1rem;
+    border-radius: 5px;
+  }
+  
+  #newPokemon:hover, #createPokemon:hover {
+    background-image: none;
+    background-color: #4b4a4a;
+  }
+  
+  /* styling the back of the card */
+  
+  .poke-order-heading {
+    text-align: center;
+    background-color: rgba(179, 28, 46, 0.753);
+    margin-top: 0;
+    margin-bottom: 0;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    padding: .2rem;
+  }
+  
+  .poke-back-name-title {
+    display: none;
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-bottom: 0;
+    text-shadow: 0 0 20px black;
+  }
+  
+  .poke-back-name {
+    visibility: hidden;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    margin-top: 3rem;
+    text-shadow: 0 5px 20px black;
+    background-color: rgba(179, 28, 46, 0.753);
+  }
+  .poke-back-name:hover {
+    visibility: visible;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    margin-top: 3rem;
+    text-shadow: 0 5px 20px black;
+    background-color: rgba(179, 28, 46, 0.753);
+  }
+  
+  .poke-experience-title {
+    text-align: center;
+    text-shadow: 0 0 20px black;
+    background-color: rgba(179, 28, 46, 0.753);
+    margin-bottom: 0;
+    margin-top: 4.1rem;
+  }
+  
+  .poke-experience {
+    text-align: center;
+    background-color: rgba(179, 28, 46, 0.753);
+    font-size: 3rem;
+    margin-top: 0;
+    padding-top: 0;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }
