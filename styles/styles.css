@@ -1,4 +1,3 @@
-  /* styling the header area */
   .title {
     text-align: center;
     font-size: 4rem;
@@ -7,37 +6,36 @@
     letter-spacing: 8px;
   }
   
-  h4 {
-    text-align: center;
-    margin: 0 auto .5rem auto;
-    padding: 0;
-  }
-  
   h2 {
     text-align: center;
     padding: 2.5rem 0 0 0;
   }
   
-  /*styling the body */
   body {
+    font-family: 'Luckiest Guy', cursive;
     padding-bottom: 2rem;
     background-image: linear-gradient(to bottom right, rgb(255, 255, 255), rgb(188, 228, 255));
   }
   
-  main {
+  main{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     grid-gap: 2rem;
     max-width: 1280px;
     margin:  0 auto;
   }
+
+  footer{
+    text-align: center;
+    max-width: 1280px;
+    margin:  0 auto;
+    padding-top: 5rem;
+    padding-bottom: 0;
+  }
   
-  /* styling the cards */
   .scene {
     width: 200px;
     height: 260px;
-    margin: 0;
-    perspective: 600px;
   }
   
   .card {
@@ -45,12 +43,12 @@
     height: 100%;
     transition: transform 1s;
     transform-style: preserve-3d;
-    cursor: pointer;
+    cursor: crosshair;
     position: relative;
   }
   
   .card.is-flipped:hover {
-    transform:  rotateY(180deg);
+    transform: rotateY(180deg);
   }
   
   .card__face {
@@ -81,7 +79,7 @@
     transform: rotateY(180deg);
     border: 6px double blue;
     box-shadow: 0 0 1px 1px white;
-    color: white;
+    color: yellow;
   }
   
   .pokeImage {
@@ -92,7 +90,6 @@
   }
   
   
-  /* front of card name styling */
   .name-front-of-card {
     color: black;
     margin: 0;
@@ -104,44 +101,9 @@
     text-shadow: 1px 20px 50px #000000;
   }
   
-  /* styling the button */
-  #newPokemon {
-    width: 25%;
-    background-image: linear-gradient(black, #4b4a4a);
-    border: 1px double black;
-    color: white;
-    font-weight: bold;
-    box-shadow: 1px 1px 2px #000000;
-    height: 2rem;
-    margin-left: 37.5%;
-    margin-bottom: 1rem;
-    border-radius: 5px;
-  }
-  
-  #createPokemon {
-    display: none;
-    width: 25%;
-    background-image: linear-gradient(black, #4b4a4a);
-    border: 1px double black;
-    color: white;
-    font-weight: bold;
-    box-shadow: 1px 1px 2px #000000;
-    height: 2rem;
-    margin-left: 37.5%;
-    margin-bottom: 1rem;
-    border-radius: 5px;
-  }
-  
-  #newPokemon:hover, #createPokemon:hover {
-    background-image: none;
-    background-color: #4b4a4a;
-  }
-  
-  /* styling the back of the card */
-  
   .poke-order-heading {
     text-align: center;
-    background-color: rgba(179, 28, 46, 0.753);
+    background-color: rgba(255, 255, 255, 0.753);
     margin-top: 0;
     margin-bottom: 0;
     border-top-left-radius: 10px;
@@ -165,7 +127,7 @@
     margin: 0;
     margin-top: 3rem;
     text-shadow: 0 5px 20px black;
-    background-color: rgba(179, 28, 46, 0.753);
+    background-color: rgba(255, 255, 255, 0.753);
   }
   .poke-back-name:hover {
     visibility: visible;
@@ -174,23 +136,57 @@
     margin: 0;
     margin-top: 3rem;
     text-shadow: 0 5px 20px black;
-    background-color: rgba(179, 28, 46, 0.753);
+    background-color: rgba(255, 255, 255, 0.753);
   }
   
   .poke-experience-title {
     text-align: center;
     text-shadow: 0 0 20px black;
-    background-color: rgba(179, 28, 46, 0.753);
+    background-color: rgba(255, 255, 255, 0.753);
     margin-bottom: 0;
     margin-top: 4.1rem;
   }
   
   .poke-experience {
     text-align: center;
-    background-color: rgba(179, 28, 46, 0.753);
+    background-color: rgba(255, 255, 255, 0.753);
     font-size: 3rem;
     margin-top: 0;
     padding-top: 0;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
+  }
+
+  #newPokemon {
+    display: none;
+    width: 50%;
+    background-image: linear-gradient(white, yellow);
+    border: 1px double black;
+    color: black;
+    font-weight: bold;
+    box-shadow: 1px 1px 2px #000000;
+    height: 2rem;
+    margin-left: 24%;
+    margin-bottom: 1rem;
+    border-radius: 5px;
+  }
+  
+  #createPokemon {
+    display: none;
+    width: 25%;
+    background-image: linear-gradient(black, #4b4a4a);
+    border: 1px double black;
+    color: white;
+    font-weight: bold;
+    box-shadow: 1px 1px 2px #000000;
+    height: 2rem;
+    margin-left: 37.5%;
+    margin-bottom: 1rem;
+    border-radius: 5px;
+  }
+  
+  #newPokemon:hover, #createPokemon:hover {
+    background-image: none;
+    background-color: blue;
+    color: white;
   }
