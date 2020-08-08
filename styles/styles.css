@@ -3,14 +3,16 @@
     font-size: 4rem;
     padding: 0;
     margin: 0;
-    letter-spacing: 8px;
+    letter-spacing: 8px
   }
   
   h2 {
     text-align: center;
     padding: 2.5rem 0 0 0;
   }
-  
+  .buttonCreate{
+    margin-top: 5rem;
+  }
   body {
     font-family: 'Luckiest Guy', cursive;
     padding-bottom: 2rem;
@@ -158,7 +160,6 @@
   }
 
   #newPokemon {
-    display: none;
     width: 50%;
     background-image: linear-gradient(white, yellow);
     border: 1px double black;
