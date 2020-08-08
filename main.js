@@ -24,7 +24,7 @@ const theData = getAPIData('https://pokeapi.co/api/v2/pokemon?limit=100&offset=2
             getAPIData(pokemon.url)
                 .then(pokedata => {
                     console.log(pokedata.random)
-                    populateDOM(pokedat)
+                    populateDOM(pokedata)
 
                 })
         }
