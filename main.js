@@ -114,13 +114,13 @@ createButton.addEventListener('click', function () {
     })
 const newButton = document.querySelector('#newPokemon')
 newButton.addEventListener('click', function () {
-    let pokeId = prompt('Please enter a Pokemon ID')
+    let pokeId = Math.round(Math.random() * 807)
     if (pokeId > 0 && pokeId <= 807) {
         getAPIData(`https://pokeapi.co/api/v2/pokemon/${pokeId}`)
             .then(result => {
                 populateDOM(result)
             })
     } else {
-        alert('Whoops, no Pokemon were found, try again. Choose another one between 1 and 807.')
+        alert('Whoops, no Pokemon were found, try again.')
     }
 })
